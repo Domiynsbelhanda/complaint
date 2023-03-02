@@ -61,7 +61,7 @@
 
         <article class="col-sm-12 maincontent" id="about">
             <header class="page-header">
-                <h1 class="page-title animate fadeInDown">Applications en ligne de reclamationd d'assurance.</h1>
+                <h1 class="page-title animate fadeInDown">Applications en ligne de plainte d'assurance.</h1>
             </header>
 
 
@@ -128,7 +128,7 @@
                                     </div>
 
                                     <div class="col-sm-3" id="divWhereDidYouHearAboutOstiOther" style="display: none;">
-                                        <label>Other:</label>
+                                        <label>Autre:</label>
                                         <label class="required">*</label>
                                         <input class="form-control" id="WhereDidYouHearAboutOstiOther"
                                                name="WhereDidYouHearAboutOstiOther" type="text" value=""/>
@@ -140,20 +140,22 @@
                     </div>
                     <div class="panel panel-default" id="divAuthorisedPerson" style="display:none;">
                         <div class="panel-heading">
-                            <h3 class="panel-title">Authorised Person lodging complaint on behalf of Policy Holder</h3>
+                            <h3 class="panel-title">
+                                Personne autorisée à déposer une plainte au nom du titulaire de la police.
+                            </h3>
                         </div>
                         <div class="panel-body">
                             <div class="form-horizontal">
                                 <div class="form-group">
                                     <div class="col-sm-6">
-                                        <label>Authorised Person's Name:</label>
+                                        <label>Nom de la personne autorisée</label>
                                         <label class="required">*</label>
                                         <input class="form-control" id="AuthorisedPersonName"
                                                name="AuthorisedPersonName" type="text" value=""/>
 
                                     </div>
                                     <div class="col-sm-6">
-                                        <label>Authorised Person's ID Number:</label>
+                                        <label>N° ID de la personne autorisée:</label>
                                         <label class="required">*</label>
                                         <input class="form-control" id="AuthorisedPersonId" name="AuthorisedPersonId"
                                                type="text" value=""/>
@@ -166,13 +168,13 @@
                     </div>
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                            <h3 class="panel-title">Particulars of Complaint</h3>
+                            <h3 class="panel-title">Détails de la plainte</h3>
                         </div>
                         <div class="panel-body">
                             <div class="form-horizontal">
                                 <div class="form-group">
                                     <div class="col-sm-6">
-                                        <label>Policy Holder Full name(s):</label>
+                                        <label>Titulaire de la police Nom(s) complet(s) :</label>
                                         <label> </label>
                                         <input class="form-control" id="PolicyHolderFullName"
                                                name="PolicyHolderFullName" type="text" value=""/>
@@ -182,11 +184,11 @@
 
                                 <div class="form-group">
                                     <div class="col-sm-4">
-                                        <label>Salutation:</label>
+                                        <label>Genre:</label>
                                         <label class="required" id="lblReqSalutation">*</label>
 
                                         <select class="form-control" id="Salutation" name="Salutation">
-                                            <option selected="selected" value="0">-- Select an option --</option>
+                                            <option selected="selected" value="0">-- Choisir une option --</option>
                                             <option value="3">Mr.</option>
                                             <option value="4">Mrs.</option>
                                             <option value="5">Ms.</option>
@@ -196,7 +198,7 @@
                                     </div>
 
                                     <div class="col-sm-4">
-                                        <label>First Name:</label>
+                                        <label>Nom:</label>
                                         <label class="required" id="lblReqFirstname">*</label>
                                         <input class="form-control" id="FirstName" name="FirstName" type="text"
                                                value=""/>
@@ -204,7 +206,7 @@
                                     </div>
 
                                     <div class="col-sm-4">
-                                        <label>Last Name:</label>
+                                        <label>Post Nom et Prénom:</label>
                                         <label class="required" id="lblReqLastname">*</label>
                                         <input class="form-control" id="LastName" name="LastName" type="text" value=""/>
 
@@ -213,19 +215,19 @@
 
                                 <div class="form-group">
                                     <div class="col-sm-4">
-                                        <label>Identification Type:</label>
+                                        <label>Type de pièce d'Identité:</label>
                                         <label class="required">*</label>
                                         <select class="form-control" id="IdentificationType" name="IdentificationType"
                                                 onchange="IdentificationTypeChanged(this.value)">
-                                            <option value="-- Select an option --">-- Select an option --</option>
-                                            <option value="ID">South African ID Number</option>
-                                            <option value="Passport">Passport Number</option>
-                                            <option value="Company">Company Registration Number</option>
+                                            <option value="-- Select an option --">-- Selectionne une option --</option>
+                                            <option value="ID">Carte d'électeur</option>
+                                            <option value="Passport">Passport</option>
+                                            <option value="Company">Carte de service</option>
                                         </select>
                                     </div>
 
                                     <div class="col-sm-4">
-                                        <label id="lblIdNumber">ID \ Passport Number:</label>
+                                        <label id="lblIdNumber">ID \ ou Numéro Passeport:</label>
                                         <label class="required" id="lblReqIdNumber">*</label>
                                         <input class="form-control" id="IdNumber" name="IdNumber"
                                                onchange="IdNumberChanged()" type="text" value=""/>
@@ -233,19 +235,36 @@
                                     </div>
 
                                     <div class="col-sm-4">
-                                        <label>Province of Residence:</label>
+                                        <label>Province de Residence:</label>
                                         <label class="required">*</label>
                                         <select class="form-control" id="Province" name="Province">
-                                            <option value="-- Select an option --">-- Select an option --</option>
-                                            <option value="Eastern Cape">Eastern Cape</option>
-                                            <option value="Free State">Free State</option>
-                                            <option value="Gauteng">Gauteng</option>
-                                            <option value="KwaZulu-Natal">KwaZulu-Natal</option>
-                                            <option value="Limpopo">Limpopo</option>
-                                            <option value="Mpumalanga">Mpumalanga</option>
-                                            <option value="North West">North West</option>
-                                            <option value="Northern Cape">Northern Cape</option>
-                                            <option value="Western Cape">Western Cape</option>
+                                            <option value="-- Select an option --">-- Selectionne une option --</option>
+                                            <option value="Kinshasa">Kinshasa</option>
+                                            <option value="Haut-Katanga">Haut-Katanga</option>
+                                            <option value="Lualaba">Lualaba</option>
+                                            <option value="Kasaï Oriental">Kasaï Oriental</option>
+                                            <option value="Kwango">Kwango</option>
+                                            <option value="Kwilu">Kwilu</option>
+                                            <option value="Kongo Central">Kongo Central</option>
+                                            <option value="Nord Kivu">Nord Kivu</option>
+                                            <option value="Sud Kivu">Sud Kivu</option>
+                                            <option value="Bas Uelé">Bas Uelé</option>
+                                            <option value="Equateur">Equateur</option>
+                                            <option value="Haut-Lomami">Haut-Lomami</option>
+                                            <option value="Haut-Uelé">Haut-Uelé</option>
+                                            <option value="Ituri">Ituri</option>
+                                            <option value="Kasaï">Kasaï</option>
+                                            <option value="Kasaï Central">Kasaï Central</option>
+                                            <option value="Lomami">Lomami</option>
+                                            <option value="Maï Ndombe">Maï Ndombe</option>
+                                            <option value="Manièma">Manièma</option>
+                                            <option value="Mongala">Mongala</option>
+                                            <option value="Nord Ubangi">Nord Ubangi</option>
+                                            <option value="Sankuru">Sankuru</option>
+                                            <option value="Sud Ubangi">Sud Ubangi</option>
+                                            <option value="Tanganyika">Tanganyika</option>
+                                            <option value="Tshopo">Tshopo</option>
+                                            <option value="Tshuapa">Tshuapa</option>
                                         </select>
 
                                     </div>
@@ -264,214 +283,167 @@
 
                                 <div class="form-group" id="vc_DateOfBirth">
                                     <div class="col-sm-4">
-                                        <label>Date of Birth:</label>
+                                        <label>Date de Naissance:</label>
                                         <label class="required">*</label>
 
 
                                         <span style="display:block;">
                                     <select class="form-control" id="DateOfBirthDay" name="DateOfBirthDay"
                                             style="width:75px;display:inline;"><option selected="selected"
-                                                                                       value="0">Day</option>
-<option value="1">1</option>
-<option value="2">2</option>
-<option value="3">3</option>
-<option value="4">4</option>
-<option value="5">5</option>
-<option value="6">6</option>
-<option value="7">7</option>
-<option value="8">8</option>
-<option value="9">9</option>
-<option value="10">10</option>
-<option value="11">11</option>
-<option value="12">12</option>
-<option value="13">13</option>
-<option value="14">14</option>
-<option value="15">15</option>
-<option value="16">16</option>
-<option value="17">17</option>
-<option value="18">18</option>
-<option value="19">19</option>
-<option value="20">20</option>
-<option value="21">21</option>
-<option value="22">22</option>
-<option value="23">23</option>
-<option value="24">24</option>
-<option value="25">25</option>
-<option value="26">26</option>
-<option value="27">27</option>
-<option value="28">28</option>
-<option value="29">29</option>
-<option value="30">30</option>
-<option value="31">31</option>
-</select>
+                                                                                       value="0">Jour</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                            <option value="7">7</option>
+                                            <option value="8">8</option>
+                                            <option value="9">9</option>
+                                            <option value="10">10</option>
+                                            <option value="11">11</option>
+                                            <option value="12">12</option>
+                                            <option value="13">13</option>
+                                            <option value="14">14</option>
+                                            <option value="15">15</option>
+                                            <option value="16">16</option>
+                                            <option value="17">17</option>
+                                            <option value="18">18</option>
+                                            <option value="19">19</option>
+                                            <option value="20">20</option>
+                                            <option value="21">21</option>
+                                            <option value="22">22</option>
+                                            <option value="23">23</option>
+                                            <option value="24">24</option>
+                                            <option value="25">25</option>
+                                            <option value="26">26</option>
+                                            <option value="27">27</option>
+                                            <option value="28">28</option>
+                                            <option value="29">29</option>
+                                            <option value="30">30</option>
+                                            <option value="31">31</option>
+                                            </select>
                                     <select class="form-control" id="DateOfBirthMonth" name="DateOfBirthMonth"
-                                            style="width:120px;display:inline;"><option selected="selected" value="0">Month</option>
-<option value="1">January</option>
-<option value="2">February</option>
-<option value="3">March</option>
-<option value="4">April</option>
-<option value="5">May</option>
-<option value="6">June</option>
-<option value="7">July</option>
-<option value="8">August</option>
-<option value="9">September</option>
-<option value="10">October</option>
-<option value="11">November</option>
-<option value="12">December</option>
-</select>
+                                            style="width:120px;display:inline;"><option selected="selected" value="0">Mois</option>
+                                        <option value="1">Janvier</option>
+                                        <option value="2">Février</option>
+                                        <option value="3">Mars</option>
+                                        <option value="4">Avril</option>
+                                        <option value="5">Mai</option>
+                                        <option value="6">Juin</option>
+                                        <option value="7">Juillet</option>
+                                        <option value="8">Août</option>
+                                        <option value="9">Septembre</option>
+                                        <option value="10">Octobre</option>
+                                        <option value="11">Novembre</option>
+                                        <option value="12">Décembre</option>
+                                    </select>
                                     <select class="form-control" id="DateOfBirthYear" name="DateOfBirthYear"
-                                            style="width:80px;display:inline;"><option selected="selected" value="0">Year</option>
-<option value="2007">2007</option>
-<option value="2006">2006</option>
-<option value="2005">2005</option>
-<option value="2004">2004</option>
-<option value="2003">2003</option>
-<option value="2002">2002</option>
-<option value="2001">2001</option>
-<option value="2000">2000</option>
-<option value="1999">1999</option>
-<option value="1998">1998</option>
-<option value="1997">1997</option>
-<option value="1996">1996</option>
-<option value="1995">1995</option>
-<option value="1994">1994</option>
-<option value="1993">1993</option>
-<option value="1992">1992</option>
-<option value="1991">1991</option>
-<option value="1990">1990</option>
-<option value="1989">1989</option>
-<option value="1988">1988</option>
-<option value="1987">1987</option>
-<option value="1986">1986</option>
-<option value="1985">1985</option>
-<option value="1984">1984</option>
-<option value="1983">1983</option>
-<option value="1982">1982</option>
-<option value="1981">1981</option>
-<option value="1980">1980</option>
-<option value="1979">1979</option>
-<option value="1978">1978</option>
-<option value="1977">1977</option>
-<option value="1976">1976</option>
-<option value="1975">1975</option>
-<option value="1974">1974</option>
-<option value="1973">1973</option>
-<option value="1972">1972</option>
-<option value="1971">1971</option>
-<option value="1970">1970</option>
-<option value="1969">1969</option>
-<option value="1968">1968</option>
-<option value="1967">1967</option>
-<option value="1966">1966</option>
-<option value="1965">1965</option>
-<option value="1964">1964</option>
-<option value="1963">1963</option>
-<option value="1962">1962</option>
-<option value="1961">1961</option>
-<option value="1960">1960</option>
-<option value="1959">1959</option>
-<option value="1958">1958</option>
-<option value="1957">1957</option>
-<option value="1956">1956</option>
-<option value="1955">1955</option>
-<option value="1954">1954</option>
-<option value="1953">1953</option>
-<option value="1952">1952</option>
-<option value="1951">1951</option>
-<option value="1950">1950</option>
-<option value="1949">1949</option>
-<option value="1948">1948</option>
-<option value="1947">1947</option>
-<option value="1946">1946</option>
-<option value="1945">1945</option>
-<option value="1944">1944</option>
-<option value="1943">1943</option>
-<option value="1942">1942</option>
-<option value="1941">1941</option>
-<option value="1940">1940</option>
-<option value="1939">1939</option>
-<option value="1938">1938</option>
-<option value="1937">1937</option>
-<option value="1936">1936</option>
-<option value="1935">1935</option>
-<option value="1934">1934</option>
-<option value="1933">1933</option>
-<option value="1932">1932</option>
-<option value="1931">1931</option>
-<option value="1930">1930</option>
-<option value="1929">1929</option>
-<option value="1928">1928</option>
-<option value="1927">1927</option>
-<option value="1926">1926</option>
-<option value="1925">1925</option>
-<option value="1924">1924</option>
-<option value="1923">1923</option>
-<option value="1922">1922</option>
-<option value="1921">1921</option>
-<option value="1920">1920</option>
-<option value="1919">1919</option>
-<option value="1918">1918</option>
-<option value="1917">1917</option>
-<option value="1916">1916</option>
-<option value="1915">1915</option>
-<option value="1914">1914</option>
-<option value="1913">1913</option>
-<option value="1912">1912</option>
-<option value="1911">1911</option>
-<option value="1910">1910</option>
-<option value="1909">1909</option>
-<option value="1908">1908</option>
-<option value="1907">1907</option>
-</select>
+                                            style="width:80px;display:inline;"><option selected="selected" value="0">Année</option>
+                                    <option value="2007">2007</option>
+                                    <option value="2006">2006</option>
+                                    <option value="2005">2005</option>
+                                    <option value="2004">2004</option>
+                                    <option value="2003">2003</option>
+                                    <option value="2002">2002</option>
+                                    <option value="2001">2001</option>
+                                    <option value="2000">2000</option>
+                                    <option value="1999">1999</option>
+                                    <option value="1998">1998</option>
+                                    <option value="1997">1997</option>
+                                    <option value="1996">1996</option>
+                                    <option value="1995">1995</option>
+                                    <option value="1994">1994</option>
+                                    <option value="1993">1993</option>
+                                    <option value="1992">1992</option>
+                                    <option value="1991">1991</option>
+                                    <option value="1990">1990</option>
+                                    <option value="1989">1989</option>
+                                    <option value="1988">1988</option>
+                                    <option value="1987">1987</option>
+                                    <option value="1986">1986</option>
+                                    <option value="1985">1985</option>
+                                    <option value="1984">1984</option>
+                                    <option value="1983">1983</option>
+                                    <option value="1982">1982</option>
+                                    <option value="1981">1981</option>
+                                    <option value="1980">1980</option>
+                                    <option value="1979">1979</option>
+                                    <option value="1978">1978</option>
+                                    <option value="1977">1977</option>
+                                    <option value="1976">1976</option>
+                                    <option value="1975">1975</option>
+                                    <option value="1974">1974</option>
+                                    <option value="1973">1973</option>
+                                    <option value="1972">1972</option>
+                                    <option value="1971">1971</option>
+                                    <option value="1970">1970</option>
+                                    <option value="1969">1969</option>
+                                    <option value="1968">1968</option>
+                                    <option value="1967">1967</option>
+                                    <option value="1966">1966</option>
+                                    <option value="1965">1965</option>
+                                    <option value="1964">1964</option>
+                                    <option value="1963">1963</option>
+                                    <option value="1962">1962</option>
+                                    <option value="1961">1961</option>
+                                    <option value="1960">1960</option>
+                                    <option value="1959">1959</option>
+                                    <option value="1958">1958</option>
+                                    <option value="1957">1957</option>
+                                    <option value="1956">1956</option>
+                                    <option value="1955">1955</option>
+                                    <option value="1954">1954</option>
+                                    <option value="1953">1953</option>
+                                    <option value="1952">1952</option>
+                                    <option value="1951">1951</option>
+                                    <option value="1950">1950</option>
+                                    <option value="1949">1949</option>
+                                    <option value="1948">1948</option>
+                                    <option value="1947">1947</option>
+                                    <option value="1946">1946</option>
+                                    <option value="1945">1945</option>
+                                    <option value="1944">1944</option>
+                                    <option value="1943">1943</option>
+                                    <option value="1942">1942</option>
+                                    <option value="1941">1941</option>
+                                    <option value="1940">1940</option>
+                                    <option value="1939">1939</option>
+                                    <option value="1938">1938</option>
+                                    <option value="1937">1937</option>
+                                    <option value="1936">1936</option>
+                                    <option value="1935">1935</option>
+                                    <option value="1934">1934</option>
+                                    <option value="1933">1933</option>
+                                    <option value="1932">1932</option>
+                                    <option value="1931">1931</option>
+                                    <option value="1930">1930</option>
+                                    <option value="1929">1929</option>
+                                    <option value="1928">1928</option>
+                                    <option value="1927">1927</option>
+                                    <option value="1926">1926</option>
+                                    <option value="1925">1925</option>
+                                    <option value="1924">1924</option>
+                                    <option value="1923">1923</option>
+                                    <option value="1922">1922</option>
+                                    <option value="1921">1921</option>
+                                    <option value="1920">1920</option>
+                                    <option value="1919">1919</option>
+                                    <option value="1918">1918</option>
+                                    <option value="1917">1917</option>
+                                    <option value="1916">1916</option>
+                                    <option value="1915">1915</option>
+                                    <option value="1914">1914</option>
+                                    <option value="1913">1913</option>
+                                    <option value="1912">1912</option>
+                                    <option value="1911">1911</option>
+                                    <option value="1910">1910</option>
+                                    <option value="1909">1909</option>
+                                    <option value="1908">1908</option>
+                                    <option value="1907">1907</option>
+                                    </select>
                                 </span>
 
-
-                                    </div>
-
-                                    <div class="col-sm-4">
-                                        <label>First Language:</label>
-
-                                        <select class="form-control" id="Language" name="Language">
-                                            <option value="">-- Select an option --</option>
-                                            <option value="Afrikaans">Afrikaans</option>
-                                            <option value="English">English</option>
-                                            <option value="Ndebele">Ndebele</option>
-                                            <option value="Pedi">Pedi</option>
-                                            <option value="Sesotho">Sesotho</option>
-                                            <option value="Swati">Swati</option>
-                                            <option value="Tswana">Tswana</option>
-                                            <option value="Venda">Venda</option>
-                                            <option value="Xhosa">Xhosa</option>
-                                            <option value="Xitsonga">Xitsonga</option>
-                                            <option value="Zulu">Zulu</option>
-                                        </select>
-
-                                    </div>
-
-                                    <div class="col-sm-4">
-                                        <label>English Literacy:</label>
-                                        <label class="required">*</label>
-
-                                        <select class="form-control" id="EnglishLiteracy" name="EnglishLiteracy">
-                                            <option value="">-- Select an option --</option>
-                                            <option value="No">No</option>
-                                            <option value="Yes">Yes</option>
-                                        </select>
-
-                                    </div>
-                                </div>
-
-                                <div class="form-group" id="vc_Race">
-                                    <div class="col-sm-4">
-                                        <label>Race:</label>
-
-                                        <select class="form-control" id="Race" name="Race">
-                                            <option value="-- Select an option --">-- Select an option --</option>
-                                            <option value="Asian">Asian</option>
-                                            <option value="Black">Black</option>
-                                            <option value="Coloured">Coloured</option>
-                                            <option value="White">White</option>
-                                        </select>
 
                                     </div>
                                 </div>
